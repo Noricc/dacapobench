@@ -3,7 +3,7 @@
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Apache License v2.0.
  * You may obtain the license at
- * 
+ *
  *    http://www.opensource.org/licenses/apache2.0.php
  * date: $Date: 2009-12-24 11:19:36 +1100 (Thu, 24 Dec 2009) $
  * id: $Id: Harness.java 738 2009-12-24 00:19:36Z steveb-oss $
@@ -38,7 +38,6 @@ public class Harness {
 
     harnessMain.invoke(null, new Object[] { args });
 
-    System.exit(0);
   }
 
   private static ClassLoader makeHarnessClassLoader() throws MalformedURLException, URISyntaxException {
@@ -53,7 +52,7 @@ public class Harness {
     if (dacapoCallbackClasspath != null) {
       File file = new File(dacapoCallbackClasspath);
       URI callbackClasspath = null;
-        
+
       if (file.isDirectory())
         callbackClasspath = file.getAbsoluteFile().toURI();
       else
@@ -61,7 +60,7 @@ public class Harness {
 
       if (callbackClasspath == null)
         throw new URISyntaxException(dacapoCallbackClasspath, "is not a URI nor a directory nor a class file");
-      
+
       urls = new URL[] { harnessJarURL, callbackClasspath.toURL() };
     } else
       urls = new URL[] { harnessJarURL };
