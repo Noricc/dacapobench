@@ -1,0 +1,15 @@
+diff -ruN lucene-7.1.0.orig/common-build.xml lucene-7.1.0/common-build.xml
+--- lucene-7.1.0.orig/common-build.xml	2017-10-13 16:14:40.000000000 +0000
++++ lucene-7.1.0/common-build.xml	2020-05-04 14:19:06.123167366 +0000
+@@ -410,9 +410,9 @@
+   </target>
+ 
+   <property name="ivy_install_path" location="${user.home}/.ant/lib" />
+-  <property name="ivy_bootstrap_url1" value="http://repo1.maven.org/maven2"/>
++  <property name="ivy_bootstrap_url1" value="https://repo1.maven.org/maven2"/>
+   <!-- you might need to tweak this from china so it works -->
+-  <property name="ivy_bootstrap_url2" value="http://uk.maven.org/maven2"/>
++  <property name="ivy_bootstrap_url2" value="https://repo1.maven.org/maven2"/>
+   <property name="ivy_checksum_sha1" value="c5ebf1c253ad4959a29f4acfe696ee48cdd9f473"/>
+ 
+   <target name="ivy-availability-check" unless="ivy.available">
