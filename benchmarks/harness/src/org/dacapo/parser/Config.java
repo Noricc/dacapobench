@@ -17,6 +17,7 @@ import java.io.PrintStream;
 import java.net.URL;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.Map;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
@@ -120,7 +121,7 @@ public class Config {
     private int nThreads = 1;
     private String description;
 
-    HashMap<String, OutputFile> outputFiles = new LinkedHashMap<String, OutputFile>(20);
+    Map<String, OutputFile> outputFiles = new LinkedHashMap<String, OutputFile>(20);
 
     Size(String name, Vector<String> args) {
       this.args = (String[]) args.toArray(new String[0]);

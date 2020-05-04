@@ -27,6 +27,7 @@ public class MyCallback extends Callback {
   };
 
   /* Immediately after the end of the benchmark */
+  /* Duration is the time the benchmark took */
   @Override
   public void stop(long duration) {
     super.stop(duration);
